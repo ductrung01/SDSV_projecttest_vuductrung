@@ -27,15 +27,15 @@ class UserServiceTest {
     void login_success_with_correct_information() {
         User user = new User(
                 1L,
-                "tuha",
+                "trungvu",
                 "123456",
-                "tuha@example.com",
-                "Tú Demo",
+                "trungvu@samsung.com",
+                "Vu Duc Trung",
                 "123 Đường A, Hà Nội",
-                "0912345678",
+                "0335654203",
                 "USER"
         );
-        String username = "tuha";
+        String username = "trungvu";
         String password = "123456";
 
         when(userRepository.findByUserNameAndPassWord(username, password))
@@ -61,7 +61,7 @@ class UserServiceTest {
 
     @Test
     void login_fail_with_wrong_password() {
-        String username = "tuha";
+        String username = "trungvu";
         String password = "wrongpass";
 
         when(userRepository.findByUserNameAndPassWord(username, password))

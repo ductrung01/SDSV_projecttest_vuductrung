@@ -46,9 +46,9 @@ class CartServiceTest {
                 .build();
 
         User user = new User(
-                1L, "tuha", "123456",
-                "tuha@example.com", "Tú Demo",
-                "123 Đường A, Hà Nội", "0912345678", "USER"
+                1L, "vuductrung", "123456",
+                "trungvu@samsung.com", "Vu Duc Trung",
+                "123 Đường A, Hà Nội", "0335654203", "USER"
         );
 
         Cart cart = new Cart(1L, 1L, new ArrayList<>());
@@ -61,7 +61,6 @@ class CartServiceTest {
 
         boolean actual = cartService.addToCart(1L, user, sampleBook);
 
-        //asert
         assertTrue(actual);
         assertEquals(1, cart.getListCartItem().size());
         assertEquals(1L, cart.getListCartItem().get(0).getBook_id());
@@ -85,8 +84,8 @@ class CartServiceTest {
                 .title("Clean Code")
                 .build();
 
-        User user = new User(1L, "tuha", "123456",
-                "tuha@example.com", "Tú Demo",
+        User user = new User(1L, "vuductrung", "123456",
+                "trungvu@samsung.com", "Tú Demo",
                 "123 Đường A, Hà Nội", "0912345678", "USER");
 
         when(bookRepository.checkStock(1L)).thenReturn(0);
@@ -99,7 +98,7 @@ class CartServiceTest {
 
     @Test
     void checkout_whenStockEnough_shouldSucceed() {
-        User user = new User(1L,"tuha","123","mail","name","addr","phone","USER");
+        User user = new User(1L,"trungvu","123","mail","name","addr","phone","USER");
 
         CartItem item = new CartItem();
         item.setCart_item_id(1L);
@@ -127,7 +126,7 @@ class CartServiceTest {
 
     @Test
     void checkout_whenOutOfStock_shouldThrow() {
-        User user = new User(1L,"tuha","123","mail","name","addr","phone","USER");
+        User user = new User(1L,"trungvu","123","mail","name","addr","phone","USER");
 
         CartItem item = new CartItem();
         item.setCart_item_id(1L);
@@ -152,7 +151,7 @@ class CartServiceTest {
 
     @Test
     void checkout_whenCartEmpty_shouldThrow() {
-        User user = new User(1L,"tuha","123","mail","name","addr","phone","USER");
+        User user = new User(1L,"trungvu","123","mail","name","addr","phone","USER");
 
         Cart emptyCart = new Cart(1L, 1L, new ArrayList<>());
 
