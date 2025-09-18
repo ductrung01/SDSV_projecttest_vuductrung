@@ -1,0 +1,12 @@
+[
+  {
+    "userid": 1,
+    "username": "vuductrung",
+    "password": "123456",
+    "email": "trungvu@samsung.com",
+    "fullName": "Vu Duc Trung",
+    "address": "123 Đường A, Hà Nội",
+    "phone": "0335654203",
+    "role": "USER"
+  }
+]

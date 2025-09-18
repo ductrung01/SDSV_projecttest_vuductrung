@@ -1,0 +1,14 @@
+[
+  {
+    "cartId": 1,
+    "userId": 1,
+    "listCartItem": [
+      {
+        "cart_item_id": 1,
+        "book_id": 1,
+        "cart_id": 1,
+        "quantity": 2
+      }
+    ]
+  }
+]
